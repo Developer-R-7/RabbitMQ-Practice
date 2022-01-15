@@ -10,8 +10,8 @@ const consumer = async () => {
     try {
         const channel = await (await connect(URL)).createChannel();
         channel.consume(queue_name, (mssg) => {
-            console.log("Message ",mssg.content.toString());
             channel.ack(mssg);
+            console.log(`Message ${mssg.content.toString()}`);
         });
     }
     catch (error){
