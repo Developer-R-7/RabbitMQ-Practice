@@ -15,7 +15,6 @@ const run = async () => {
             Buffer.from("Greeting Message from Rushi")
         );
         console.log(send);
-        process.exit(0);
     }
     catch (error){
         console.error(error)

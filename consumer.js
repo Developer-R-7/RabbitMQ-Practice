@@ -16,6 +16,7 @@ const consumer = async () => {
     }
     catch (error){
         console.log(error);
+        process.exit(-1);
     }
 }
 consumer();
